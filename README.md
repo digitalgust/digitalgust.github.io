@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+## miniJVM website
 
-You can use the [editor on GitHub](https://github.com/digitalgust/digitalgust.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+this site shows gits of miniJVM
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### miniJVM libaries 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+These lists of jars used to miniJVM, if there is a jar named A.jar, put it in /binary/libex/, append it to cli -classpath.
+```
+    mini_jvm -bootclasspath ../lib/minijvm_rt.jar -cp ../libex/A.jar  com.main.class.Name
+```
+## Janino java compiler
+   [Janino](http://janino-compiler.github.io/janino/)       
+Janino is a super-small, super-fast Java compiler.   
+Janino can not only compile a set of source files to a set of class files like JAVAC, but also compile a Java expression, a block, a class body, one .java file or a set of .java files in memory, load the bytecode and execute it directly in the same JVM.   
+[janino.jar](https://github.com/digitalgust/digitalgust.github.io/blob/main/lib/janino.jar?raw=true)    
+[commons-compiler.jar](https://github.com/digitalgust/digitalgust.github.io/blob/main/lib/commons-compiler.jar?raw=true)    
+```
+    #compile /binary/res/BpDeepTest.java
+    mini_jvm -bootclasspath ../lib/minijvm_rt.jar -cp ../libex/janino.jar:../libex/commons-compiler.jar   org.codehaus.janino.Compiler  ../res/BpDeepTest.java
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/digitalgust/digitalgust.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
